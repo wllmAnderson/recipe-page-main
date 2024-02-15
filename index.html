@@ -18,14 +18,72 @@
       background-color: hsl(30, 54%, 90%);
       padding: 10%;
     }
+    #preperation {
+      background-color: hsl(330, 100%, 98%);
+    }
+    p {
+      color: hsl(14, 45%, 36%);
+      font-size: 16px;
+    }
+    body {
+      height: 10%;
+      width: 1000px;
+      
+      margin: auto;
+    }
+    body {
+  font-family: 'Young Serif', serif; /* Apply Young Serif font to body */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif; /* Apply Outfit font to headings */
+}
+    /* Young Serif */
+@font-face {
+  font-family: 'Young Serif';
+  src: url('https://fonts.gstatic.com/s/youngserif/v4/ga6BawhkzQgRXzNHdKU.woff2') format('woff2');
+  font-weight: 400;
+}
+
+/* Outfit */
+@font-face {
+  font-family: 'Outfit';
+  src: url('https://fonts.gstatic.com/s/outfit/v10/3JnXJrqTn3cWDmrUPx7T4z6Ew3q1.woff2') format('woff2'); /* 400 */
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Outfit';
+  src: url('https://fonts.gstatic.com/s/outfit/v10/3JnXJrqTn3cWDmrUPx7T4z6Ew3q1.woff2') format('woff2'); /* 600 */
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Outfit';
+  src: url('https://fonts.gstatic.com/s/outfit/v10/3JnXJrqTn3cWDmrUPx7T4z6Ew3q1.woff2') format('woff2'); /* 700 */
+  font-weight: 700;
+}
+/* Mobile styles */
+@media (max-width: 375px) {
+  body {
+    font-size: 14px; /* Example font size for mobile */
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 376px) and (max-width: 1440px) {
+  body {
+    font-size: 16px; /* Example font size for desktop */
+  }
+}
   </style>
 </head>
 <body >
-  <div class="container bg-white rounded-3">
-    <img src="assets/images/image-omelette.jpeg" class="img-fluid mt-4" alt="omelette">
+  <div id="main" class="container bg-white rounded-3">
+    <img src="assets/images/image-omelette.jpeg" class="img-fluid mt-4 rounded-4" alt="omelette">
 
-    <section>
-      Simple Omelette Recipe
+    <section class="title">
+      <h1>Simple Omelette Recipe</h1>
     </section>
 
     <section>
@@ -33,63 +91,76 @@
   to perfection, optionally filled with your choice of cheese, vegetables, or meats.
     </section>
 
-    <section>
+    <section class="container rounded-4 mt-4" id="preperation">
       Preparation time
-
-  Total: Approximately 10 minutes
-  Preparation: 5 minutes
-  Cooking: 5 minutes
+      <ul>
+        <li>Total: Approximately 10 minutes</li>
+        <li>Preparation: 5 minutes</li>
+        <li>Cooking: 5 minutes</li>
+      </ul>
     </section>
     <section>
-      Ingredients
-
-  2-3 large eggs
-  Salt, to taste
-  Pepper, to taste
-  1 tablespoon of butter or oil
-  Optional fillings: cheese, diced vegetables, cooked meats, herbs
-    </section>
-    <section>
-      Instructions
-
-  Beat the eggs: In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. 
-  You can add a tablespoon of water or milk for a fluffier texture.
-
-  Heat the pan: Place a non-stick frying pan over medium heat and add butter or oil.
-
-  Cook the omelette: Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure 
-  the eggs evenly coat the surface.
-
-  Add fillings (optional): When the eggs begin to set at the edges but are still slightly runny in the 
-  middle, sprinkle your chosen fillings over one half of the omelette.
-
-  Fold and serve: As the omelette continues to cook, carefully lift one edge and fold it over the 
-  fillings. Let it cook for another minute, then slide it onto a plate.
-
-  Enjoy: Serve hot, with additional salt and pepper if needed.
+      <h2><p>Ingredients</p></h2>
+      <ul>
+        <li>2-3 large eggs</li>
+        <li>Salt, to taste</li>
+        <li>Pepper, to taste</li>
+        <li>1 tablespoon of butter or oil</li>
+        <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
+      </ul>
     </section>
 
+    <hr class="my-4">
+
     <section>
-      Nutrition
+      <h2><p>Instructions</p></h2>
+      <ol>
+        <li><b>Beat the eggs:</b> In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. 
+  You can add a tablespoon of water or milk for a fluffier texture.</li>
+        <li><b>Heat the pan:</b> Place a non-stick frying pan over medium heat and add butter or oil.</li>
+        <li><b>Cook the omelette:</b> Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure 
+  the eggs evenly coat the surface.</li>
+        <li><b>Add fillings (optional):</b> When the eggs begin to set at the edges but are still slightly runny in the 
+  middle, sprinkle your chosen fillings over one half of the omelette.</li>
+        <li><b>Fold and serve:</b> As the omelette continues to cook, carefully lift one edge and fold it over the 
+  fillings. Let it cook for another minute, then slide it onto a plate.</li>
+        <li><b>Enjoy:</b> Serve hot, with additional salt and pepper if needed.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2><p>Nutrition</p></h2>
+      
 
   The table below shows nutritional values per serving without the additional fillings.
-
-  Calories
-  277kcal
-
-  Carbs
-  0g
-
-  Protein
-  20g
-
-  Fat
-  22g
-    </section>
+  
+  <div class="container">
+    <div class="hstack gap-3 d-flex align-items-center justify-content-between">
+      <div class="p-2">Calories</div>
+      <div class="p-2">277kcal</div>
+    </div>
+    <hr>
+    <div class="hstack gap-3 d-flex align-items-center justify-content-between">
+      <div class="p-2">Carbs</div>
+      <div class="p-2">0g</div>
+    </div>
+    <hr>
+    <div class="hstack gap-3 d-flex align-items-center justify-content-between">
+      <div class="p-2">Protein</div>
+      <div class="p-2">20g</div>
+    </div>
+    <hr>
+    <div class="hstack gap-3 d-flex align-items-center justify-content-between">
+      <div class="p-2">Fat</div>
+      <div class="p-2">22g</div>
+    </div>
+  </div>
+  
+  </section>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/wllmAnderson">William Anderson</a>.
   </div>
 
   </div>
